@@ -1,10 +1,10 @@
 #!/bin/bash
 unzip -o ./libs/asio.zip -d ./libs
-cmake CMakeLists.txt -DCMAKE_TOOLCHAIN_FILE=./toolchains/toolchain-i686-w64-mingw32.cmake
+cmake CMakeLists.txt -DCMAKE_TOOLCHAIN_FILE=./toolchains/toolchain-i686-w64-mingw32.cmake -DCMAKE_BUILD_TYPE=Release
 make
 
 cd client
-cmake CMakeLists.txt -DCMAKE_TOOLCHAIN_FILE=../toolchains/toolchain-i686-w64-mingw32.cmake
+cmake CMakeLists.txt -DCMAKE_TOOLCHAIN_FILE=../toolchains/toolchain-i686-w64-mingw32.cmake -DCMAKE_BUILD_TYPE=Release
 make
 cd ..
 

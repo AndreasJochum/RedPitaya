@@ -64,6 +64,11 @@ and press run.
 Code - C
 ********
 
+.. note::
+
+    C code examples don't require the use of the SCPI server, we have included them here to demonstrate how the same functionality can be achieved with different programming languages. 
+    Instructions on how to compile the code are here -> `link <https://redpitaya.readthedocs.io/en/latest/developerGuide/comC.html>`_
+
 .. code-block:: c
 
     /* Red Pitaya external trigger pulse generation Example */
@@ -72,7 +77,7 @@ Code - C
     #include <stdlib.h>
     #include <unistd.h>
 
-    #include "redpitaya/rp.h"
+    #include "rp.h"
 
 
     int main(int argc, char **argv){
@@ -119,13 +124,13 @@ Code - Python
     rp_s.tx_txt('SOUR1:FREQ:FIX ' + str(freq))
     rp_s.tx_txt('SOUR1:VOLT ' + str(ampl))
     rp_s.tx_txt('SOUR1:BURS:NCYC 2')
-    rp_s.tx_txt('OUTPUT1:STATE ON')
     rp_s.tx_txt('SOUR1:BURS:STAT ON')
     rp_s.tx_txt('SOUR1:TRIG:SOUR EXT_PE')
-
+    rp_s.tx_txt('OUTPUT1:STATE ON')
+    
 Code - LabVIEW
 **************
 
 .. image:: Generate-signal-on-external-trigger_LV.png
 
-`Download <http://downloads.redpitaya.com/downloads/labview/Generate%20signal%20on%20external%20trigger.vi>`_
+`Download <https://downloads.redpitaya.com/downloads/Clients/labview/Generate%20signal%20on%20external%20trigger.vi>`_

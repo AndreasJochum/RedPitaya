@@ -1,10 +1,10 @@
 #!/bin/bash
 unzip -o ./libs/asio.zip -d ./libs
-cmake CMakeLists.txt
+cmake CMakeLists.txt -DCMAKE_BUILD_TYPE=Release
 make
 
 cd client
-cmake CMakeLists.txt
+cmake CMakeLists.txt -DCMAKE_BUILD_TYPE=Release
 make
 cd ..
 

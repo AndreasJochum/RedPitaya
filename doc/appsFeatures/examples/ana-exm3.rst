@@ -16,6 +16,7 @@ Required hardware
     - Voltmeter
 
 Wiring example for STEMlab 125-14 & STEMlab 125-10:
+
 .. image:: Set_analog_voltage_on_slow_analog_input1.png
 
 Circuit
@@ -95,5 +96,5 @@ Code - LabVIEW
 
 .. image:: Interactive-voltage-setting-on-slow-analog-output_LV.png
 
-`Download <http://downloads.redpitaya.com/downloads/labview/Interactive%20voltage%20setting%20on%20slow%20analog%20output.vi>`_
+`Download <https://downloads.redpitaya.com/downloads/Clients/labview/Interactive%20voltage%20setting%20on%20slow%20analog%20output.vi>`_
 

@@ -123,6 +123,11 @@ and press run.
 Code - C
 ********
 
+.. note::
+
+    C code examples don't require the use of the SCPI server, we have included them here to demonstrate how the same functionality can be achieved with different programming languages. 
+    Instructions on how to compile the code are here -> `link <https://redpitaya.readthedocs.io/en/latest/developerGuide/comC.html>`_
+
 .. code-block:: c
 
     /* Red Pitaya C API example Acquiring a signal from a buffer  
@@ -131,7 +136,7 @@ Code - C
     #include <stdio.h>
     #include <stdlib.h>
     #include <unistd.h>
-    #include "redpitaya/rp.h"
+    #include "rp.h"
     
     int main(int argc, char **argv){
     
@@ -305,4 +310,4 @@ Code - LabVIEW
 
 .. image:: On-trigger-signal-acquisition_LV.png
 
-`Download <http://downloads.redpitaya.com/downloads/labview/On%20trigger%20signal%20acquisition.vi>`_
+`Download <https://downloads.redpitaya.com/downloads/Clients/labview/On%20trigger%20signal%20acquisition.vi>`_

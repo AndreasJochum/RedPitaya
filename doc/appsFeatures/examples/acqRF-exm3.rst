@@ -24,7 +24,7 @@ Wiring example for STEMlab 125-14 & STEMlab 125-10:
 
 Circuit
 *******
-￼
+
 .. image:: generate_continous_signal_on_fast_analog_output_circuit1.png
 
 Code - MATLAB®
@@ -58,16 +58,15 @@ Code - MATLAB®
     fprintf(tcpipObj,'ACQ:RST');
 
     fprintf(tcpipObj,'SOUR1:FUNC SINE');                                                 
-    fprintf(tcpipObj,'SOUR1:FREQ:FIX 1000');     % Set frequency of output signal
+    fprintf(tcpipObj,'SOUR1:FREQ:FIX 1000000');     % Set frequency of output signal
     fprintf(tcpipObj,'SOUR1:VOLT 1');          % Set amplitude of output signal
 
     fprintf(tcpipObj,'SOUR1:BURS:STAT ON');    % Set burst mode to ON
-    fprintf(tcpipObj,'SOUR1:BURS:NCYC 1');       % Set 1 pulses of sine wave
-    fprintf(tcpipObj,'OUTPUT1:STATE ON');         % Set output to ON
+    fprintf(tcpipObj,'SOUR1:BURS:NCYC 3');       % Set 3 pulses of sine wave
 
     %% Set Acquire
 
-    fprintf(tcpipObj,'ACQ:DEC 64');
+    fprintf(tcpipObj,'ACQ:DEC 1');
     fprintf(tcpipObj,'ACQ:TRIG:LEV 0');
     fprintf(tcpipObj,'ACQ:TRIG:DLY 0');
 
@@ -76,7 +75,8 @@ Code - MATLAB®
     fprintf(tcpipObj,'ACQ:START');
     pause(1);
     fprintf(tcpipObj,'ACQ:TRIG AWG_PE');
-    fprintf(tcpipObj,'SOUR1:TRIG:IMM');           % Set generator trigger to immediately
+    fprintf(tcpipObj,'OUTPUT1:STATE ON');         % Set output to ON
+    pause(1);
 
     %% Wait for trigger
     while 1
@@ -103,4 +103,4 @@ Code - LabVIEW
 
 .. image:: Synchronised-one-pulse-signal-generation-and-acquisition_LV.png
 
-`Download <http://downloads.redpitaya.com/downloads/labview/Synchronised%20one%20pulse%20signal%20generation%20and%20acquisition.vi>`_
+`Download <https://downloads.redpitaya.com/downloads/Clients/labview/Synchronised%20one%20pulse%20signal%20generation%20and%20acquisition.vi>`_

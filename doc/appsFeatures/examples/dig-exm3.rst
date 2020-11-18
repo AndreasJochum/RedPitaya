@@ -76,13 +76,18 @@ MATLAB editor, save project and press run.
 
 Code - C
 ********
- 
+
+.. note::
+
+    C code examples don't require the use of the SCPI server, we have included them here to demonstrate how the same functionality can be achieved with different programming languages. 
+    Instructions on how to compile the code are here -> `link <https://redpitaya.readthedocs.io/en/latest/developerGuide/comC.html>`_
+
 .. code-block:: c
 
     #include <stdio.h>
     #include <stdlib.h>
 
-    #include "redpitaya/rp.h"
+    #include "rp.h"
 
     int main (int argc, char **argv) {
         rp_pinState_t state;
@@ -140,4 +145,4 @@ Code - LabVIEW
 
 .. image:: Push-button-and-turn-on-LED_LV.png
 
-`Dowload <http://downloads.redpitaya.com/downloads/labview/Push%20button%20and%20turn%20on%20LED.vi>`_
+`Dowload <https://downloads.redpitaya.com/downloads/Clients/labview/Push%20button%20and%20turn%20on%20LED.vi>`_
